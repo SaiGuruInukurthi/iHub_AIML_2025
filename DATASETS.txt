@@ -1,0 +1,156 @@
+DATASET USAGE MAPPING
+===================
+
+This file maps each notebook to the datasets it uses. Make sure you have the required datasets in the repository root directory before running the notebooks.
+
+📊 AVAILABLE DATASETS:
+---------------------
+- car_evaluation.csv      # Car evaluation dataset (1728 records, 7 attributes)
+- INDIA_685.csv           # India demographic/geographic dataset
+- reviews.csv             # Product/service reviews dataset
+- sequences.fasta         # Biological sequence data (DNA/protein sequences)
+- spam.csv                # Email spam classification dataset
+
+📓 NOTEBOOK-DATASET MAPPING:
+----------------------------
+
+MODULE 1 - FOUNDATIONS:
+----------------------
+📒 Mod1_Lab1_Features.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris, Boston Housing)
+   └── External: None required
+
+📒 Mod1_Lab2_ML_terms_and_metrics.ipynb
+   └── Datasets: Built-in sklearn datasets
+   └── External: None required
+
+📒 Mod1_Lab3_Data_Augmentation.ipynb
+   └── Datasets: Built-in sklearn datasets, synthetic data
+   └── External: None required
+
+📒 Mod1_Lab4_Transforming_data_using_linear_algebra.ipynb
+   └── Datasets: Built-in sklearn datasets, generated matrices
+   └── External: None required
+
+MODULE 2 - DIMENSIONALITY REDUCTION:
+-----------------------------------
+📒 Mod2_Lab1_Basic_Plots.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris)
+   └── External: None required
+
+📒 Mod2_Lab2_Principal_Components_Analysis_(PCA).ipynb
+   └── Datasets: Built-in sklearn datasets (Iris, Wine, Digits)
+   └── External: None required
+
+📒 Mod2_Lab4_Manifold_Learning_Methods.ipynb
+   └── Datasets: Built-in sklearn datasets (Swiss roll, S-curve)
+   └── External: None required
+
+📒 Mod2_Project.ipynb
+   └── Datasets: Built-in sklearn datasets
+   └── External: May use custom datasets (check notebook content)
+
+MODULE 3 - K-NEAREST NEIGHBORS:
+-------------------------------
+📒 Mod3_Lab1_Understanding_Distance_metrics_and_Introduction_to_KNN.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris)
+   └── External: None required
+
+📒 Mod3_Lab2_Using_KNN_for_Text_Classification.ipynb
+   └── Datasets: Built-in datasets, text data generation
+   └── External: reviews.csv (generated within notebook)
+   └── Note: Creates reviews.csv file during execution
+
+📒 Mod3_Lab3_Implementing_KNN_from_scratch_and_visualize_Algorithm_performance.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris)
+   └── External: car_evaluation.csv ⚠️ REQUIRED
+   └── Note: This notebook requires car_evaluation.csv for Task 3-6
+
+MODULE 4 - GRADIENT DESCENT:
+----------------------------
+📒 Mod4_Lab1_Perceptron_and_Gradient_Descent.ipynb
+   └── Datasets: Built-in sklearn datasets, synthetic data
+   └── External: None required
+
+📒 Mod4_Lab2_Introduction_to_Gradient_Descent.ipynb
+   └── Datasets: Synthetic polynomial data, generated datasets
+   └── External: None required
+
+FOUNDATIONAL NOTEBOOKS:
+-----------------------
+📒 Linear_Algebra.ipynb
+   └── Datasets: Generated matrices and vectors
+   └── External: None required
+
+📒 Probability_Basics.ipynb
+   └── Datasets: Synthetic probability distributions
+   └── External: None required
+
+DATASET DETAILS:
+===============
+
+🔹 car_evaluation.csv
+   Purpose: Multi-class classification
+   Features: buying, maint, doors, persons, lug_boot, safety, class
+   Used by: Mod3_Lab3 (Tasks 3-6: Confusion matrix, classification report, decision boundary, Voronoi diagram)
+   Size: 1,728 records
+   Classes: 4 (unacc, acc, good, vgood)
+
+🔹 INDIA_685.csv
+   Purpose: Geographic/demographic analysis
+   Used by: Currently not used in any notebook (reserved for future labs)
+   Note: May be used in advanced modules or project work
+
+🔹 reviews.csv
+   Purpose: Text classification, sentiment analysis
+   Used by: Mod3_Lab2 (generated during execution)
+   Note: This file is created by the notebook, not required as input
+
+🔹 sequences.fasta
+   Purpose: Bioinformatics sequence analysis
+   Used by: Currently not used in any notebook (reserved for future labs)
+   Format: FASTA format biological sequences
+   Note: May be used in specialized bioinformatics modules
+
+🔹 spam.csv
+   Purpose: Binary classification (spam detection)
+   Used by: Currently not used in any notebook (reserved for future labs)
+   Note: May be used in text classification or advanced ML modules
+
+QUICK REFERENCE:
+===============
+
+MUST HAVE FOR BASIC FUNCTIONALITY:
+- No external datasets required for Modules 1, 2, and 4
+- car_evaluation.csv REQUIRED for Mod3_Lab3
+
+OPTIONAL/FUTURE USE:
+- INDIA_685.csv (not currently used)
+- sequences.fasta (not currently used)  
+- spam.csv (not currently used)
+
+GENERATED DURING EXECUTION:
+- reviews.csv (created by Mod3_Lab2)
+
+TROUBLESHOOTING:
+===============
+
+❌ FileNotFoundError: car_evaluation.csv
+   Solution: Download car_evaluation.csv and place in repository root
+
+❌ FileNotFoundError: reviews.csv  
+   Solution: Run Mod3_Lab2 first to generate this file, or create manually
+
+❌ Missing sklearn datasets
+   Solution: Install scikit-learn: pip install scikit-learn
+
+❌ FASTA file format issues
+   Solution: Install biopython: pip install biopython
+
+DATASET SOURCES:
+===============
+- car_evaluation.csv: UCI Machine Learning Repository
+- Built-in sklearn datasets: Included with scikit-learn package
+- Synthetic datasets: Generated programmatically within notebooks
+
+For the most up-to-date dataset requirements, always check the import statements and file loading sections in each notebook.
