@@ -263,6 +263,8 @@ If you encounter issues:
    - Error message (if any)
    - Steps to reproduce the problem
 
+If trouble persists, contact: **saiguruinukurthi@gmail.com**
+
 ## 🎓 Additional Resources
 
 - [Python Virtual Environments Guide](https://docs.python.org/3/tutorial/venv.html)
