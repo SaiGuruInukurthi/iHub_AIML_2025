@@ -10,6 +10,8 @@ This file maps each notebook to the datasets it uses. Make sure you have the req
 - reviews.csv             # Product/service reviews dataset
 - sequences.fasta         # Biological sequence data (DNA/protein sequences)
 - spam.csv                # Email spam classification dataset
+- Mall_Customers.csv      # Mall customer segmentation dataset (auto-downloaded by Mod5_Lab3)
+- Wholesale customers data.csv  # Wholesale customer dataset (auto-downloaded by Mod5_Lab3)
 
 📓 NOTEBOOK-DATASET MAPPING:
 ----------------------------
@@ -76,6 +78,33 @@ MODULE 4 - GRADIENT DESCENT:
    └── Datasets: Synthetic polynomial data, generated datasets
    └── External: None required
 
+📒 Mod4_Lab3_Gradient_Descent.ipynb
+   └── Datasets: Synthetic data, mathematical functions
+   └── External: None required
+
+MODULE 5 - LINEAR REGRESSION & CLUSTERING:
+------------------------------------------
+📒 Mod5_Lab1_Linear_Regression_MSE_and_Polynomial_Regression.ipynb
+   └── Datasets: California Housing (downloaded from URL)
+   └── External: None required (auto-downloaded)
+   └── URL: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.csv
+
+📒 Mod5_Lab2_Loss_Functions.ipynb
+   └── Datasets: Built-in sklearn datasets (Diabetes, California Housing), BigMart dataset
+   └── External: None required (auto-downloaded)
+   └── URL: https://raw.githubusercontent.com/PranavTadimeti/Regression-lab2/main/BigMart-train.csv
+
+📒 Mod5_Lab3_Clustering.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris, Digits), clustering datasets
+   └── External: Mall_Customers.csv, Wholesale customers data.csv ⚠️ AUTO-DOWNLOADED
+   └── Note: Downloads Mall_Customers.csv and Wholesale customers data.csv during execution
+
+MODULE 6 - NEURAL NETWORKS:
+---------------------------
+📒 Mod6_Lab1_Implementing_forward_propagation_and_back_propagation.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris)
+   └── External: None required
+
 FOUNDATIONAL NOTEBOOKS:
 -----------------------
 📒 Linear_Algebra.ipynb
@@ -117,12 +146,32 @@ DATASET DETAILS:
    Used by: Currently not used in any notebook (reserved for future labs)
    Note: May be used in text classification or advanced ML modules
 
+🔹 Mall_Customers.csv
+   Purpose: Customer segmentation clustering analysis
+   Used by: Mod5_Lab3 (Exercise 4: Customer segmentation)
+   Features: CustomerID, Gender, Age, Annual Income, Spending Score
+   Size: 200 records
+   Note: Auto-downloaded during Mod5_Lab3 execution
+
+🔹 Wholesale customers data.csv
+   Purpose: Wholesale customer clustering analysis
+   Used by: Mod5_Lab3 (Exercise 4: Business clustering analysis)
+   Features: Channel, Region, Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen
+   Size: 440 records  
+   Note: Auto-downloaded during Mod5_Lab3 execution
+
 QUICK REFERENCE:
 ===============
 
 MUST HAVE FOR BASIC FUNCTIONALITY:
-- No external datasets required for Modules 1, 2, and 4
+- No external datasets required for Modules 1, 2, 4, 5, and 6
 - car_evaluation.csv REQUIRED for Mod3_Lab3
+
+AUTO-DOWNLOADED DURING EXECUTION:
+- California Housing dataset (Mod5_Lab1, Mod5_Lab2 - from URL)
+- BigMart dataset (Mod5_Lab2 - from URL)
+- Mall_Customers.csv (Mod5_Lab3 - from Google Drive)
+- Wholesale customers data.csv (Mod5_Lab3 - from Google Drive)
 
 OPTIONAL/FUTURE USE:
 - INDIA_685.csv (not currently used)
@@ -141,16 +190,35 @@ TROUBLESHOOTING:
 ❌ FileNotFoundError: reviews.csv  
    Solution: Run Mod3_Lab2 first to generate this file, or create manually
 
+❌ FileNotFoundError: Mall_Customers.csv or Wholesale customers data.csv
+   Solution: Run Mod5_Lab3 cells that download these files, or check internet connection
+
+❌ URL download failures (Module 5 datasets)
+   Solution: Check internet connection, try running download cells again
+
 ❌ Missing sklearn datasets
    Solution: Install scikit-learn: pip install scikit-learn
 
 ❌ FASTA file format issues
    Solution: Install biopython: pip install biopython
 
+❌ PyTorch/TensorFlow not found (Module 6)
+   Solution: Install deep learning libraries: pip install torch tensorflow keras
+
 DATASET SOURCES:
 ===============
 - car_evaluation.csv: UCI Machine Learning Repository
 - Built-in sklearn datasets: Included with scikit-learn package
 - Synthetic datasets: Generated programmatically within notebooks
+- California Housing: Aurelien Geron's Hands-On ML repository
+- BigMart dataset: PranavTadimeti's Regression lab repository
+- Mall_Customers.csv: Google Drive (Kaggle Mall Customer Segmentation dataset)
+- Wholesale customers data.csv: Google Drive (UCI Wholesale Customer dataset)
+
+MODULE-SPECIFIC REQUIREMENTS:
+============================
+- Module 5: Requires internet connection for dataset downloads
+- Module 6: Requires PyTorch/TensorFlow for neural network implementations
+- All modules: scikit-learn, pandas, numpy, matplotlib
 
 For the most up-to-date dataset requirements, always check the import statements and file loading sections in each notebook.
