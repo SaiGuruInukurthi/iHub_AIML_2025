@@ -14,7 +14,7 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod2_Lab1_Basic_Plots.ipynb                 # Data visualization basics
 ├── Mod2_Lab2_Manifold_Learning_Methods.ipynb   # Manifold learning techniques
 ├── Mod2_Lab3_Principal_Components_Analysis_(PCA).ipynb     # PCA implementation
-├── Mod2_Project.ipynb                          # Module 2 project
+├── Mod2_Project.ipynb                          # SARS-CoV-2 genomic analysis project (ENHANCED)
 ├── Mod3_Lab1_Understanding_Distance_metrics_and_Introduction_to_KNN.ipynb  # Distance metrics & KNN
 ├── Mod3_Lab2_Using_KNN_for_Text_Classification.ipynb      # KNN for text analysis
 ├── Mod3_Lab3_Implementing_KNN_from_scratch_and_visualize_Algorithm_performance.ipynb  # KNN from scratch
@@ -237,9 +237,23 @@ python -m ipykernel install --user --name=.venv --display-name="Python (iHub AIM
 - Focus on basic ML concepts and data preprocessing
 - Requires: pandas, numpy, matplotlib, seaborn
 
-### Module 2: Dimensionality Reduction
-- Covers PCA and manifold learning
-- Requires: scikit-learn, plotly for interactive plots
+### Module 2: Dimensionality Reduction & Bioinformatics
+- Covers PCA, t-SNE, ISOMAP, and manifold learning
+- **Enhanced Project**: SARS-CoV-2 genomic analysis with advanced dimensionality reduction
+- Requires: scikit-learn, plotly, biopython, tqdm
+- Datasets: INDIA_685.csv, sequences.fasta (685 SARS-CoV-2 genome sequences)
+
+#### 🧬 Mod2_Project.ipynb - Enhanced Bioinformatics Analysis
+This project has been significantly enhanced beyond basic requirements:
+- **K-mer Analysis**: 7-mer profiling of 685 SARS-CoV-2 genome sequences
+- **Mutation Profiling**: Detection and analysis of genomic mutations across Indian states
+- **Advanced Dimensionality Reduction**: 
+  - PCA with explained variance analysis
+  - t-SNE with multiple perplexity optimization (5, 15, 30, 50)
+  - ISOMAP with neighborhood analysis (5, 10, 15, 20 neighbors)
+- **Comparative Analysis**: Side-by-side visualization of all three methods
+- **Quantitative Metrics**: Silhouette analysis, Calinski-Harabasz scores, clustering evaluation
+- **Geographic Clustering**: State-wise COVID-19 variant analysis and spread patterns
 
 ### Module 3: K-Nearest Neighbors
 - Implementation from scratch and performance analysis

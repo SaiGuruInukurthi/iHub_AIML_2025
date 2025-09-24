@@ -48,9 +48,11 @@ MODULE 2 - DIMENSIONALITY REDUCTION:
    └── Datasets: Built-in sklearn datasets (Swiss roll, S-curve)
    └── External: None required
 
-📒 Mod2_Project.ipynb
-   └── Datasets: Built-in sklearn datasets
-   └── External: May use custom datasets (check notebook content)
+📒 Mod2_Project.ipynb ⚠️ ENHANCED PROJECT
+   └── Datasets: SARS-CoV-2 genomic analysis project
+   └── External: INDIA_685.csv, sequences.fasta ⚠️ REQUIRED
+   └── Analysis: K-mer profiling, mutation analysis, PCA, t-SNE, ISOMAP
+   └── Note: Advanced bioinformatics project with dimensionality reduction
 
 MODULE 3 - K-NEAREST NEIGHBORS:
 -------------------------------
@@ -126,9 +128,11 @@ DATASET DETAILS:
    Classes: 4 (unacc, acc, good, vgood)
 
 🔹 INDIA_685.csv
-   Purpose: Geographic/demographic analysis
-   Used by: Currently not used in any notebook (reserved for future labs)
-   Note: May be used in advanced modules or project work
+   Purpose: SARS-CoV-2 genomic metadata for Indian strains
+   Used by: Mod2_Project.ipynb ⚠️ REQUIRED
+   Features: Contains strain metadata, location information, collection dates
+   Size: 685 records of Indian SARS-CoV-2 samples
+   Analysis: Geographic clustering, mutation profiling by state
 
 🔹 reviews.csv
    Purpose: Text classification, sentiment analysis
@@ -136,10 +140,12 @@ DATASET DETAILS:
    Note: This file is created by the notebook, not required as input
 
 🔹 sequences.fasta
-   Purpose: Bioinformatics sequence analysis
-   Used by: Currently not used in any notebook (reserved for future labs)
-   Format: FASTA format biological sequences
-   Note: May be used in specialized bioinformatics modules
+   Purpose: SARS-CoV-2 genome sequences for bioinformatics analysis
+   Used by: Mod2_Project.ipynb ⚠️ REQUIRED
+   Format: FASTA format containing 685 SARS-CoV-2 genome sequences
+   Analysis: K-mer profiling (7-mer), mutation detection, sequence clustering
+   Size: 685 complete genome sequences (~30KB each)
+   Note: Core dataset for genomic analysis and dimensionality reduction
 
 🔹 spam.csv
    Purpose: Binary classification (spam detection)
@@ -164,8 +170,9 @@ QUICK REFERENCE:
 ===============
 
 MUST HAVE FOR BASIC FUNCTIONALITY:
-- No external datasets required for Modules 1, 2, 4, 5, and 6
+- No external datasets required for Modules 1, 4, 5, and 6
 - car_evaluation.csv REQUIRED for Mod3_Lab3
+- INDIA_685.csv + sequences.fasta REQUIRED for Mod2_Project (Enhanced)
 
 AUTO-DOWNLOADED DURING EXECUTION:
 - California Housing dataset (Mod5_Lab1, Mod5_Lab2 - from URL)
