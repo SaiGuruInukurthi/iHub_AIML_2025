@@ -73,10 +73,20 @@ pip install -r requirements.txt
 For different modules that may have conflicting dependencies:
 
 ```bash
+# For Module 0 notebooks (Mathematical Foundations)
+python -m venv .venv_mod0
+.venv_mod0\Scripts\activate  # Windows
+pip install numpy matplotlib scipy scikit-image sympy seaborn plotly
+
+# For Module 0 Probability Basics (separate environment if needed)
+python -m venv .venv_mod0_probability
+.venv_mod0_probability\Scripts\activate  # Windows
+pip install numpy matplotlib seaborn scipy pandas plotly sympy statsmodels
+
 # For Module 1 notebooks
 python -m venv .venv_mod1
 .venv_mod1\Scripts\activate  # Windows
-pip install pandas numpy matplotlib seaborn scikit-learn
+pip install pandas numpy matplotlib seaborn scikit-learn plotly nltk wikipedia keras tensorflow
 
 # For Module 2 notebooks
 python -m venv .venv_mod2
@@ -120,6 +130,9 @@ nltk>=3.8.0
 jupyter>=1.0.0
 ipykernel>=6.20.0
 biopython>=1.81.0  # For sequences.fasta file
+scikit-image>=0.20.0  # For SVD image processing (Module 0)
+sympy>=1.12.0  # Symbolic mathematics (Module 0)
+statsmodels>=0.14.0  # Statistical modeling (Module 0 Probability)
 tensorflow>=2.20.0  # For deep learning (Module 6)
 keras>=3.11.0       # For neural networks
 torch>=2.8.0        # PyTorch for deep learning
@@ -233,9 +246,53 @@ python -m ipykernel install --user --name=.venv --display-name="Python (iHub AIM
 
 ## Module-Specific Notes
 
-### Module 1: Foundations
-- Focus on basic ML concepts and data preprocessing
-- Requires: pandas, numpy, matplotlib, seaborn
+### Module 0: Mathematical Foundations
+- **Comprehensive Linear Algebra**: Matrix operations, eigendecomposition, SVD
+- **Advanced Features**: System of equations solving, matrix power operations, norms
+- **Practical Applications**: SVD image compression and reconstruction examples
+- **Interactive Visualizations**: Image processing demonstrations with scikit-image
+- **Probability Theory**: Comprehensive statistical foundations with real-world data analysis
+- Requires: numpy, matplotlib, scipy, scikit-image, sympy, statsmodels, pandas, plotly
+- **Status**: ✅ Both notebooks enhanced and fully functional
+
+#### 🧮 Mod0_Linear_Algebra.ipynb - Complete Mathematical Foundation
+This notebook provides comprehensive coverage of linear algebra concepts essential for ML:
+- **Matrix Operations**: Transpose, dot product, matrix multiplication, outer products
+- **Advanced Matrix Methods**: Multi-dot optimization, matrix powers, determinants, inverses
+- **Eigenanalysis**: Eigenvalues, eigenvectors, and their practical interpretations
+- **Linear Systems**: Solving systems of equations using NumPy's linear algebra solver
+- **Matrix Decomposition**: Singular Value Decomposition (SVD) with practical applications
+- **Image Processing**: SVD-based image compression and reconstruction demonstrations
+- **Performance Analysis**: Comparing different matrix multiplication approaches
+- **Comprehensive Examples**: From basic operations to advanced applications like dimensionality reduction
+
+#### 📊 Mod0_Probability_Basics.ipynb - Statistical Foundations for ML
+This notebook covers essential probability and statistics concepts with practical applications:
+- **Basic Probability**: Fractions, combinatorics, sample spaces, and probability rules
+- **Statistical Measures**: Mean, variance, standard deviation with real-world student grades data
+- **Probability Distributions**: Normal, binomial, Poisson distributions with interactive visualizations
+- **Data Analysis**: Real student grades dataset analysis with descriptive statistics
+- **Interactive Plots**: Plotly visualizations for probability mass/density functions
+- **Mathematical Foundations**: Using fractions module for exact probability calculations
+- **Practical Examples**: Card drawing, dice rolling, and statistical sampling demonstrations
+- **Environment**: Dedicated .venv_mod0_probability with comprehensive statistical packages
+
+### Module 1: Foundations & Feature Engineering
+- **Enhanced Feature Engineering**: Comprehensive text and image feature extraction
+- **Multi-language Analysis**: N-gram analysis across English, French, Spanish, German
+- **Advanced Explorations**: All lab questions answered with detailed code and analysis
+- Requires: pandas, numpy, matplotlib, seaborn, wikipedia, nltk, keras (for MNIST), sklearn, plotly
+
+#### 🔧 Mod1_Lab1_Features.ipynb - Complete Feature Engineering Guide
+This notebook provides comprehensive coverage of feature extraction techniques:
+- **Text Feature Engineering**: Character n-grams (1-5 grams) for language detection
+- **Multi-language Analysis**: Wikipedia content analysis across 4+ languages
+- **Image Feature Engineering**: MNIST digit analysis with 8+ feature types
+- **Advanced Visualizations**: 2D heatmaps, 3D plots, parallel coordinates, PCA
+- **Custom Feature Development**: Aspect ratio, symmetry, geometric features
+- **Multi-class Analysis**: Feature performance across different digit combinations
+- **Comprehensive Explorations**: All lab questions answered with working code
+- **Datasets**: MNIST (auto-loaded), Wikipedia (auto-downloaded), synthetic text
 
 ### Module 2: Dimensionality Reduction & Bioinformatics
 - Covers PCA, t-SNE, ISOMAP, and manifold learning
@@ -275,7 +332,9 @@ This project has been significantly enhanced beyond basic requirements:
 
 ## Learning Path
 
-1. **Start with**: `Mod0_Linear_Algebra.ipynb` and `Mod0_Probability_Basics.ipynb`
+1. **Start with Module 0**: 
+   - `Mod0_Linear_Algebra.ipynb` - Essential mathematical foundations
+   - `Mod0_Probability_Basics.ipynb` - Statistical concepts for ML
 2. **Module 1**: Feature engineering and ML basics
 3. **Module 2**: Data visualization and dimensionality reduction
 4. **Module 3**: Classification algorithms (KNN)

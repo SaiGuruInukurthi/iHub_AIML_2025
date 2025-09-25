@@ -18,9 +18,12 @@ This file maps each notebook to the datasets it uses. Make sure you have the req
 
 MODULE 1 - FOUNDATIONS:
 ----------------------
-📒 Mod1_Lab1_Features.ipynb
-   └── Datasets: Built-in sklearn datasets (Iris, Boston Housing)
-   └── External: None required
+📒 Mod1_Lab1_Features.ipynb ✅ ENHANCED & COMPLETE
+   └── Datasets: MNIST digits (from Keras), Wikipedia articles (auto-downloaded), synthetic text data
+   └── External: None required (all data downloaded/generated automatically)
+   └── Analysis: N-gram text analysis, image feature extraction, multi-language comparison
+   └── Features: Character n-grams (1-5 grams), image features (sum, hull, hole, boundary, custom)
+   └── Note: Comprehensive feature engineering notebook with exploration questions answered
 
 📒 Mod1_Lab2_ML_terms_and_metrics.ipynb
    └── Datasets: Built-in sklearn datasets
@@ -107,15 +110,22 @@ MODULE 6 - NEURAL NETWORKS:
    └── Datasets: Built-in sklearn datasets (Iris)
    └── External: None required
 
-FOUNDATIONAL NOTEBOOKS:
------------------------
-📒 Linear_Algebra.ipynb
-   └── Datasets: Generated matrices and vectors
-   └── External: None required
+MODULE 0 - MATHEMATICAL FOUNDATIONS:
+-----------------------------------
+📒 Mod0_Linear_Algebra.ipynb ✅ ENHANCED & COMPLETE
+   └── Datasets: Built-in sample images (scikit-image astronaut), generated matrices
+   └── External: None required (all data generated programmatically)
+   └── Analysis: Comprehensive linear algebra operations and visualizations
+   └── Features: Matrix operations, SVD, eigendecomposition, system solving, image compression
+   └── Note: Advanced mathematical notebook with practical examples and SVD image reconstruction
 
-📒 Probability_Basics.ipynb
-   └── Datasets: Synthetic probability distributions
-   └── External: None required
+📒 Mod0_Probability_Basics.ipynb ✅ CONFIGURED & COMPLETE
+   └── Datasets: Online grades dataset, synthetic probability distributions, generated statistical data
+   └── External: grades.csv (auto-downloaded from archive.org)
+   └── URL: https://archive.org/download/ml-fundamentals-data/machine-learning-fundamentals-data/grades.csv
+   └── Analysis: Probability theory, statistical distributions, descriptive statistics, probability plots
+   └── Features: Fractions, combinatorics, normal/binomial/Poisson distributions, statistical measures
+   └── Note: Comprehensive probability foundations with real student grades dataset analysis
 
 DATASET DETAILS:
 ===============
@@ -170,11 +180,14 @@ QUICK REFERENCE:
 ===============
 
 MUST HAVE FOR BASIC FUNCTIONALITY:
+- No external datasets required for Module 0 (Mathematical Foundations)
 - No external datasets required for Modules 1, 4, 5, and 6
 - car_evaluation.csv REQUIRED for Mod3_Lab3
 - INDIA_685.csv + sequences.fasta REQUIRED for Mod2_Project (Enhanced)
 
 AUTO-DOWNLOADED DURING EXECUTION:
+- MNIST dataset (Mod1_Lab1 - via Keras)
+- Wikipedia articles (Mod1_Lab1 - multi-language content)
 - California Housing dataset (Mod5_Lab1, Mod5_Lab2 - from URL)
 - BigMart dataset (Mod5_Lab2 - from URL)
 - Mall_Customers.csv (Mod5_Lab3 - from Google Drive)
@@ -187,6 +200,7 @@ OPTIONAL/FUTURE USE:
 
 GENERATED DURING EXECUTION:
 - reviews.csv (created by Mod3_Lab2)
+- Synthetic text data (created by Mod1_Lab1 for different source analysis)
 
 TROUBLESHOOTING:
 ===============
@@ -224,6 +238,7 @@ DATASET SOURCES:
 
 MODULE-SPECIFIC REQUIREMENTS:
 ============================
+- Module 0: numpy, matplotlib, scipy, scikit-image (for SVD image examples)
 - Module 5: Requires internet connection for dataset downloads
 - Module 6: Requires PyTorch/TensorFlow for neural network implementations
 - All modules: scikit-learn, pandas, numpy, matplotlib
