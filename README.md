@@ -22,6 +22,7 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod4_Lab1_Perceptron_and_Gradient_Descent.ipynb        # Perceptron & gradient descent
 ├── Mod4_Lab2_Introduction_to_Gradient_Descent.ipynb       # Advanced gradient descent
 ├── Mod4_Lab3_Gradient_Descent.ipynb            # Advanced gradient descent techniques
+├── Mod4_project.ipynb                          # Comprehensive gradient descent and optimization project
 ├── Mod5_Lab1_Linear_Regression_MSE_and_Polynomial_Regression.ipynb  # Linear regression & polynomial regression
 ├── Mod5_Lab2_Loss_Functions.ipynb              # Loss functions analysis
 ├── Mod5_Lab3_Clustering.ipynb                  # Clustering algorithms (K-Means, Hierarchical, DBSCAN)
@@ -111,6 +112,11 @@ pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter notebook 
 python -m venv .venv_mod4
 .venv_mod4\Scripts\activate  # Windows
 pip install pandas numpy matplotlib seaborn scikit-learn scipy
+
+# For Module 4 Project (Gradient Descent & Optimization)
+python -m venv mod4_project_venv
+mod4_project_venv\Scripts\activate  # Windows
+pip install matplotlib numpy sympy scikit-learn jupyter notebook ipykernel scipy
 
 # For Module 5 notebooks
 python -m venv .venv_mod5
@@ -352,9 +358,32 @@ This comprehensive project analyzes diabetes prediction in Pima Indian Women usi
 - **Virtual Environment**: Dedicated mod3_project_venv for isolation
 - **Dependencies**: pandas, numpy, matplotlib, seaborn, scikit-learn, scipy
 
-### Module 4: Gradient Descent
-- Advanced optimization techniques
-- Requires: scipy for optimization functions
+### Module 4: Gradient Descent & Optimization
+- Advanced optimization techniques and mathematical function analysis
+- **Enhanced Project**: Comprehensive gradient descent implementation with multi-dimensional optimization
+- Requires: scipy for optimization functions, sympy for symbolic mathematics, matplotlib for 3D plotting
+
+#### 📈 Mod4_project.ipynb - Gradient Descent & Perceptron Project ✅ COMPLETE
+This comprehensive project demonstrates gradient descent optimization across multiple mathematical functions:
+- **Mathematical Functions**: 
+  - f(x) = x² + x + 1 (basic quadratic optimization)
+  - g(x) = x⁴ - 4x² + 5 (multiple minima analysis)  
+  - h(x) = x⁵ - 2x⁴ + 2 (divergence and overflow examples)
+  - f(x,y) = 1/(3^(-x²-y²) + 1) (3D optimization with partial derivatives)
+- **Advanced Analysis**:
+  - Learning rate comparison (0.0005, 0.001, 0.002) with convergence analysis
+  - Cost reduction tracking over iterations with detailed step size analysis
+  - 3D surface visualization with contour plots, wireframes, and filled contours
+  - Partial derivative mathematical formulation and implementation
+- **Visualization Suite**:
+  - 2D function and derivative plotting side-by-side
+  - 3D surface plots with gradient descent path visualization
+  - Cost reduction analysis with logarithmic scaling
+  - Learning rate convergence comparison with final value analysis
+- **10 Complete Tasks**: All project tasks implemented with comprehensive mathematical rigor
+- **Virtual Environment**: Dedicated mod4_project_venv for isolation
+- **Dependencies**: matplotlib, numpy, sympy, scikit-learn, scipy, mpl_toolkits.mplot3d
+- **Educational Value**: Demonstrates gradient descent theory, learning rates, cost functions, and optimization
 
 ### Module 5: Linear Regression & Clustering
 - Linear regression, polynomial regression, and loss functions
