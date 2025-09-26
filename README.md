@@ -25,6 +25,7 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod5_Lab2_Loss_Functions.ipynb              # Loss functions analysis
 ├── Mod5_Lab3_Clustering.ipynb                  # Clustering algorithms (K-Means, Hierarchical, DBSCAN)
 ├── Mod6_Lab1_Implementing_forward_propagation_and_back_propagation.ipynb  # Neural networks fundamentals
+├── Mod6_Lab2_Training_a_Neural_Network.ipynb   # Neural network training from scratch
 ├── car_evaluation.csv                          # Car evaluation dataset
 ├── INDIA_685.csv                               # India dataset
 ├── Mall_Customers.csv                          # Mall customers dataset for clustering
@@ -327,8 +328,19 @@ This project has been significantly enhanced beyond basic requirements:
 
 ### Module 6: Neural Networks
 - Forward propagation and back propagation implementation
-- Neural network fundamentals
-- Requires: tensorflow, keras, torch for deep learning
+- Neural network training from scratch with custom implementations
+- Neural network fundamentals and gradient descent optimization
+- Requires: numpy, matplotlib, scikit-learn (for basic implementations), tensorflow, keras, torch for advanced deep learning
+
+#### 🧠 Mod6_Lab2_Training_a_Neural_Network.ipynb - Neural Network Tutorial
+This notebook provides a comprehensive walkthrough of neural network concepts:
+- **Theoretical Foundation**: Detailed explanations of neurons, layers, weights, biases, activation functions
+- **Mathematical Background**: Weighted sums, sigmoid activation, cost functions, gradient descent
+- **Custom Implementation**: Complete neural network class built from scratch
+- **Practical Examples**: Training on Iris dataset with visualization of cost reduction
+- **Learning Concepts**: Forward propagation, backpropagation, parameter optimization
+- **Dependencies**: numpy, matplotlib, scikit-learn (Iris dataset)
+- **Environment**: Compatible with mod6_lab2_venv or main .venv
 
 ## Learning Path
 

@@ -110,6 +110,13 @@ MODULE 6 - NEURAL NETWORKS:
    └── Datasets: Built-in sklearn datasets (Iris)
    └── External: None required
 
+📒 Mod6_Lab2_Training_a_Neural_Network.ipynb
+   └── Datasets: Built-in sklearn datasets (Iris)
+   └── External: None required
+   └── Analysis: Neural network fundamentals, forward/backward propagation implementation
+   └── Features: Custom neural network class, gradient descent, sigmoid activation
+   └── Note: Tutorial notebook demonstrating neural network training from scratch
+
 MODULE 0 - MATHEMATICAL FOUNDATIONS:
 -----------------------------------
 📒 Mod0_Linear_Algebra.ipynb ✅ ENHANCED & COMPLETE
