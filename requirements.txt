@@ -1,9 +1,9 @@
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-scikit-learn>=1.3.0
-scipy>=1.10.0  # Required for statistical functions and Voronoi diagrams in Mod3_project
+pandas>=2.0.0  # Core data manipulation for all modules; essential for Mod5_project COVID-19 data analysis
+numpy>=1.24.0  # Numerical computing foundation; used in Mod5_project for array operations and linear algebra
+matplotlib>=3.7.0  # Plotting and visualization; critical for Mod5_project regression analysis plots
+seaborn>=0.12.0  # Advanced statistical visualization
+scikit-learn>=1.3.0  # Machine learning library; core for Mod5_project regression models (Linear, Polynomial, Ridge)
+scipy>=1.10.0  # Scientific computing; required for statistical functions in Mod3_project and Mod5_project
 plotly>=5.14.0
 nltk>=3.8.0
 torch>=2.0.0

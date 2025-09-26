@@ -6,6 +6,7 @@ This file maps each notebook to the datasets it uses. Make sure you have the req
 📊 AVAILABLE DATASETS:
 ---------------------
 - car_evaluation.csv      # Car evaluation dataset (1728 records, 7 attributes)
+- covid_19_data.csv       # COVID-19 dataset with confirmed cases, deaths, recoveries by date/location ⚠️ REQUIRED for Mod5_project
 - diabetes.csv            # Pima Indian Diabetes dataset (768 records, 9 features) ⚠️ REQUIRED for Mod3_project
 - INDIA_685.csv           # India demographic/geographic dataset
 - reviews.csv             # Product/service reviews dataset
@@ -152,6 +153,32 @@ MODULE 5 - LINEAR REGRESSION & CLUSTERING:
    └── External: Mall_Customers.csv, Wholesale customers data.csv ⚠️ AUTO-DOWNLOADED
    └── Note: Downloads Mall_Customers.csv and Wholesale customers data.csv during execution
 
+📒 Mod5_project.ipynb ✅ COMPLETE PROJECT
+   └── Dataset: covid_19_data.csv ⚠️ REQUIRED
+   └── Purpose: COVID-19 regression analysis using linear, polynomial, and ridge regression
+   └── Analysis: Comprehensive COVID-19 data analysis with multiple regression techniques
+   └── Tasks Completed:
+       • Task 1: Load COVID-19 data into pandas dataframe
+       • Task 2: Create cumulative dataframe (cases, deaths, recoveries by date)
+       • Task 3: Create "closed cases" column (deaths + recoveries)
+       • Task 4: Create "active cases" column (confirmed - closed)
+       • Task 5: Plot total cases over time with trend analysis
+       • Task 6: Plot active vs closed cases comparison
+       • Task 7: Calculate growth factors for all case types
+       • Task 8: Visualize growth factors with comparative plots
+       • Part 2: Multiple regression model implementations and comparisons
+   └── Features: 
+       • Data preprocessing and temporal analysis
+       • Linear regression with performance metrics
+       • Polynomial regression (degree=5) with feature transformation
+       • Ridge regression with hyperparameter tuning (BayesianRidge)
+       • Polynomial Ridge regression with cross-validation
+       • Model comparison using MAE and MSE metrics
+   └── Regression Models: Linear, Polynomial (degree=5), Ridge, Polynomial Ridge
+   └── Visualizations: Time series plots, growth factor analysis, prediction comparisons
+   └── Best Model: Ridge Polynomial Regression (lowest MAE/MSE values)
+   └── Environment: Uses main .venv environment with comprehensive ML packages
+
 MODULE 6 - NEURAL NETWORKS:
 ---------------------------
 📒 Mod6_Lab1_Implementing_forward_propagation_and_back_propagation.ipynb
@@ -200,6 +227,16 @@ DATASET DETAILS:
    Used by: Mod3_Lab3 (Tasks 3-6: Confusion matrix, classification report, decision boundary, Voronoi diagram)
    Size: 1,728 records
    Classes: 4 (unacc, acc, good, vgood)
+
+🔹 covid_19_data.csv
+   Purpose: COVID-19 regression analysis and time series prediction
+   Features: ObservationDate, Province/State, Country/Region, Last Update, Confirmed, Deaths, Recovered
+   Used by: Mod5_project.ipynb ⚠️ REQUIRED
+   Records: Temporal COVID-19 data with daily case counts by location
+   Analysis: Linear regression, polynomial regression, ridge regression for case prediction
+   Tasks: 8 data analysis tasks + comprehensive regression modeling (Part 2)
+   Models: Linear, Polynomial (degree=5), Ridge, Polynomial Ridge with hyperparameter tuning
+   Note: Early pandemic data for regression analysis, growth factor calculations, and model comparison
 
 🔹 diabetes.csv
    Purpose: Binary classification for diabetes prediction in Pima Indian Women
@@ -254,9 +291,10 @@ QUICK REFERENCE:
 
 MUST HAVE FOR BASIC FUNCTIONALITY:
 - No external datasets required for Module 0 (Mathematical Foundations)
-- No external datasets required for Modules 1, 4, 5, and 6
+- No external datasets required for Modules 1, 4, and 6
 - car_evaluation.csv REQUIRED for Mod3_Lab3
 - diabetes.csv REQUIRED for Mod3_project
+- covid_19_data.csv REQUIRED for Mod5_project
 - INDIA_685.csv + sequences.fasta REQUIRED for Mod2_Project (Enhanced)
 - No external datasets required for Mod4_project (uses synthetic mathematical functions)
 

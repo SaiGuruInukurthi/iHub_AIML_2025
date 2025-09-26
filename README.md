@@ -26,11 +26,13 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod5_Lab1_Linear_Regression_MSE_and_Polynomial_Regression.ipynb  # Linear regression & polynomial regression
 ├── Mod5_Lab2_Loss_Functions.ipynb              # Loss functions analysis
 ├── Mod5_Lab3_Clustering.ipynb                  # Clustering algorithms (K-Means, Hierarchical, DBSCAN)
+├── Mod5_project.ipynb                          # COVID-19 regression analysis project (COMPLETE)
 ├── Mod6_Lab1_Implementing_forward_propagation_and_back_propagation.ipynb  # Neural networks fundamentals
 ├── Mod6_Lab2_Training_a_Neural_Network.ipynb   # Neural network training from scratch
 ├── Mod6_Lab3_CNN_&_Architectures.ipynb         # CNN implementation, visualization & transfer learning
 ├── car_evaluation.csv                          # Car evaluation dataset
-├── diabetes.csv                                # Pima Indian Diabetes dataset (for Mod3_project)
+├── covid_19_data.csv                           # COVID-19 dataset (for Mod5_project)
+├── diabetes.csv                                # Pima Indian Diabetes dataset (for Mod3_project)  
 ├── INDIA_685.csv                               # India dataset
 ├── Mall_Customers.csv                          # Mall customers dataset for clustering
 ├── Wholesale customers data.csv                # Wholesale customers dataset
@@ -263,6 +265,7 @@ python -m ipykernel install --user --name=.venv --display-name="Python (iHub AIM
 - Check that all CSV files are in the same directory as notebooks
 - **diabetes.csv**: Required for Mod3_project.ipynb - download Pima Indian Diabetes dataset
 - **car_evaluation.csv**: Required for Mod3_Lab3 - download from UCI repository
+- **covid_19_data.csv**: Required for Mod5_project.ipynb - COVID-19 dataset for regression analysis
 
 ## Module-Specific Notes
 
@@ -388,7 +391,39 @@ This comprehensive project demonstrates gradient descent optimization across mul
 ### Module 5: Linear Regression & Clustering
 - Linear regression, polynomial regression, and loss functions
 - Clustering algorithms: K-Means, Hierarchical, DBSCAN
-- Requires: scikit-learn, matplotlib, seaborn for visualization
+- **Enhanced Project**: COVID-19 regression analysis with comprehensive model comparison
+- Requires: scikit-learn, matplotlib, seaborn for visualization, pandas for data manipulation
+
+#### 🦠 Mod5_project.ipynb - COVID-19 Regression Analysis Project ✅ COMPLETE
+This comprehensive project applies multiple regression techniques to predict COVID-19 case trends:
+- **Dataset**: COVID-19 data with confirmed cases, deaths, and recoveries by date and location
+- **Data Analysis Tasks**:
+  - Task 1: Load COVID-19 data into pandas dataframe with exploration
+  - Task 2: Create cumulative dataframe aggregating cases, deaths, recoveries by date
+  - Task 3: Calculate "closed cases" column (deaths + recoveries)
+  - Task 4: Calculate "active cases" column (confirmed - closed cases)
+  - Task 5: Time series visualization with trend analysis and findings summary
+  - Task 6: Active vs closed cases comparison with detailed plotting
+  - Task 7: Growth factor calculation for confirmed, recovered, and death cases
+  - Task 8: Growth factor visualization with comparative analysis over time
+- **Regression Models**:
+  - **Linear Regression**: Basic linear model with performance metrics (MAE, MSE)
+  - **Polynomial Regression**: Degree-5 polynomial with feature transformation
+  - **Ridge Regression**: BayesianRidge with hyperparameter tuning using RandomizedSearchCV
+  - **Polynomial Ridge Regression**: Combined polynomial features with ridge regularization
+- **Model Evaluation**:
+  - Train/test split (85% train, 15% test) with temporal ordering preserved
+  - Cross-validation with hyperparameter optimization
+  - Performance comparison using Mean Absolute Error (MAE) and Mean Squared Error (MSE)
+  - Best model identification: Ridge Polynomial Regression achieved lowest error rates
+- **Visualizations**:
+  - Time series plots of COVID-19 cases with date range annotations
+  - Growth factor analysis with reference lines and comparative trends
+  - Regression prediction plots comparing actual vs predicted values
+  - Model performance comparison with detailed error analysis
+- **Dependencies**: pandas, numpy, matplotlib, scikit-learn, scipy
+- **Data Source**: Local covid_19_data.csv file (previously downloaded from external source)
+- **Analysis Depth**: Complete workflow from data exploration to model selection
 
 ### Module 6: Neural Networks & Deep Learning
 - Forward propagation and back propagation implementation
