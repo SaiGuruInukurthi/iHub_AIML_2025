@@ -6,6 +6,7 @@ This file maps each notebook to the datasets it uses. Make sure you have the req
 📊 AVAILABLE DATASETS:
 ---------------------
 - car_evaluation.csv      # Car evaluation dataset (1728 records, 7 attributes)
+- diabetes.csv            # Pima Indian Diabetes dataset (768 records, 9 features) ⚠️ REQUIRED for Mod3_project
 - INDIA_685.csv           # India demographic/geographic dataset
 - reviews.csv             # Product/service reviews dataset
 - sequences.fasta         # Biological sequence data (DNA/protein sequences)
@@ -74,6 +75,25 @@ MODULE 3 - K-NEAREST NEIGHBORS:
    └── Datasets: Built-in sklearn datasets (Iris)
    └── External: car_evaluation.csv ⚠️ REQUIRED
    └── Note: This notebook requires car_evaluation.csv for Task 3-6
+
+📒 Mod3_project.ipynb ✅ COMPLETE PROJECT
+   └── Dataset: diabetes.csv ⚠️ REQUIRED
+   └── Purpose: Diabetes prediction in Pima Indian Women using KNN classification
+   └── Analysis: Comprehensive EDA, feature scaling comparison, K-value optimization
+   └── Tasks Completed: 
+       • Task 1: Correlation analysis with heatmap visualization
+       • Task 2: Pairplot analysis with diabetes outcome as hue
+       • Task 3: Pedigree function vs diabetes boxplot analysis
+       • Task 4: Pregnancies vs diabetes relationship visualization
+       • Task 5: Age vs diabetes outcome analysis
+       • Task 6: KNN error rate optimization with K-value selection
+       • Task 7: MinMax scaling implementation and performance comparison
+       • Task 8: Voronoi diagram visualization with PCA dimensionality reduction
+       • Task 9: Comprehensive K-Fold cross-validation analysis
+   └── Features: 8 predictive features (Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
+   └── Scaling Methods: StandardScaler, MinMaxScaler with performance comparison
+   └── Visualizations: Correlation heatmaps, boxplots, pairplots, decision boundaries, Voronoi diagrams
+   └── Environment: mod3_project_venv (dedicated virtual environment)
 
 MODULE 4 - GRADIENT DESCENT:
 ----------------------------
@@ -155,6 +175,15 @@ DATASET DETAILS:
    Size: 1,728 records
    Classes: 4 (unacc, acc, good, vgood)
 
+🔹 diabetes.csv
+   Purpose: Binary classification for diabetes prediction in Pima Indian Women
+   Features: Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, Outcome
+   Used by: Mod3_project.ipynb ⚠️ REQUIRED
+   Size: 768 records (500 non-diabetic, 268 diabetic)
+   Classes: 2 (0: non-diabetic, 1: diabetic)
+   Analysis: EDA with correlation analysis, feature scaling comparison, KNN optimization
+   Note: Core dataset for comprehensive diabetes prediction project with 9 complete tasks
+
 🔹 INDIA_685.csv
    Purpose: SARS-CoV-2 genomic metadata for Indian strains
    Used by: Mod2_Project.ipynb ⚠️ REQUIRED
@@ -201,6 +230,7 @@ MUST HAVE FOR BASIC FUNCTIONALITY:
 - No external datasets required for Module 0 (Mathematical Foundations)
 - No external datasets required for Modules 1, 4, 5, and 6
 - car_evaluation.csv REQUIRED for Mod3_Lab3
+- diabetes.csv REQUIRED for Mod3_project
 - INDIA_685.csv + sequences.fasta REQUIRED for Mod2_Project (Enhanced)
 
 AUTO-DOWNLOADED DURING EXECUTION:

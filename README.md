@@ -18,6 +18,7 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod3_Lab1_Understanding_Distance_metrics_and_Introduction_to_KNN.ipynb  # Distance metrics & KNN
 ├── Mod3_Lab2_Using_KNN_for_Text_Classification.ipynb      # KNN for text analysis
 ├── Mod3_Lab3_Implementing_KNN_from_scratch_and_visualize_Algorithm_performance.ipynb  # KNN from scratch
+├── Mod3_project.ipynb                          # Diabetes prediction project with comprehensive KNN analysis
 ├── Mod4_Lab1_Perceptron_and_Gradient_Descent.ipynb        # Perceptron & gradient descent
 ├── Mod4_Lab2_Introduction_to_Gradient_Descent.ipynb       # Advanced gradient descent
 ├── Mod4_Lab3_Gradient_Descent.ipynb            # Advanced gradient descent techniques
@@ -28,6 +29,7 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod6_Lab2_Training_a_Neural_Network.ipynb   # Neural network training from scratch
 ├── Mod6_Lab3_CNN_&_Architectures.ipynb         # CNN implementation, visualization & transfer learning
 ├── car_evaluation.csv                          # Car evaluation dataset
+├── diabetes.csv                                # Pima Indian Diabetes dataset (for Mod3_project)
 ├── INDIA_685.csv                               # India dataset
 ├── Mall_Customers.csv                          # Mall customers dataset for clustering
 ├── Wholesale customers data.csv                # Wholesale customers dataset
@@ -99,6 +101,11 @@ pip install pandas numpy matplotlib seaborn scikit-learn plotly
 python -m venv .venv_mod3
 .venv_mod3\Scripts\activate  # Windows
 pip install pandas numpy matplotlib seaborn scikit-learn scipy nltk
+
+# For Module 3 Project (Diabetes Prediction)
+python -m venv mod3_project_venv
+mod3_project_venv\Scripts\activate  # Windows
+pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter notebook ipykernel
 
 # For Module 4 notebooks
 python -m venv .venv_mod4
@@ -248,6 +255,8 @@ python -m ipykernel install --user --name=.venv --display-name="Python (iHub AIM
 #### 5. File Not Found Errors
 - Ensure you're running notebooks from the repository root directory
 - Check that all CSV files are in the same directory as notebooks
+- **diabetes.csv**: Required for Mod3_project.ipynb - download Pima Indian Diabetes dataset
+- **car_evaluation.csv**: Required for Mod3_Lab3 - download from UCI repository
 
 ## Module-Specific Notes
 
@@ -319,7 +328,29 @@ This project has been significantly enhanced beyond basic requirements:
 
 ### Module 3: K-Nearest Neighbors
 - Implementation from scratch and performance analysis
+- **Enhanced Project**: Comprehensive diabetes prediction analysis with KNN
 - Requires: scipy for distance metrics, nltk for text processing
+
+#### 🩺 Mod3_project.ipynb - Diabetes Prediction Project ✅ COMPLETE
+This comprehensive project analyzes diabetes prediction in Pima Indian Women using KNN classification:
+- **Dataset**: diabetes.csv (768 records, 9 features) - Pima Indian Women diabetes study
+- **Comprehensive EDA**: Correlation analysis, distribution plots, class balance analysis
+- **Feature Analysis**: BMI, age, pregnancies, pedigree function relationships with diabetes
+- **Scaling Comparison**: StandardScaler vs MinMaxScaler performance analysis
+- **Visualization Suite**: 
+  - Correlation heatmaps with seaborn
+  - Pairplot analysis with diabetes outcome classification
+  - Boxplot comparisons across all key features
+  - Voronoi diagrams with PCA dimensionality reduction
+  - Decision boundary visualization
+- **KNN Optimization**: K-value selection using elbow method and cross-validation
+- **Advanced Analysis**: 
+  - K-Fold cross-validation with stratified sampling
+  - Statistical significance testing with paired t-tests
+  - Comprehensive performance metrics and error analysis
+- **9 Complete Tasks**: All project tasks implemented with detailed analysis
+- **Virtual Environment**: Dedicated mod3_project_venv for isolation
+- **Dependencies**: pandas, numpy, matplotlib, seaborn, scikit-learn, scipy
 
 ### Module 4: Gradient Descent
 - Advanced optimization techniques
