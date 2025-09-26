@@ -26,6 +26,7 @@ This repository contains comprehensive machine learning notebooks covering vario
 ├── Mod5_Lab3_Clustering.ipynb                  # Clustering algorithms (K-Means, Hierarchical, DBSCAN)
 ├── Mod6_Lab1_Implementing_forward_propagation_and_back_propagation.ipynb  # Neural networks fundamentals
 ├── Mod6_Lab2_Training_a_Neural_Network.ipynb   # Neural network training from scratch
+├── Mod6_Lab3_CNN_&_Architectures.ipynb         # CNN implementation, visualization & transfer learning
 ├── car_evaluation.csv                          # Car evaluation dataset
 ├── INDIA_685.csv                               # India dataset
 ├── Mall_Customers.csv                          # Mall customers dataset for clustering
@@ -109,10 +110,10 @@ python -m venv .venv_mod5
 .venv_mod5\Scripts\activate  # Windows
 pip install pandas numpy matplotlib seaborn scikit-learn scipy
 
-# For Module 6 notebooks
+# For Module 6 notebooks (Neural Networks & CNNs)
 python -m venv .venv_mod6
 .venv_mod6\Scripts\activate  # Windows
-pip install numpy matplotlib scikit-learn tensorflow keras torch torchvision
+pip install numpy matplotlib scikit-learn tensorflow keras torch torchvision opencv-python gdown pillow
 ```
 
 ## Required Dependencies
@@ -134,10 +135,13 @@ biopython>=1.81.0  # For sequences.fasta file
 scikit-image>=0.20.0  # For SVD image processing (Module 0)
 sympy>=1.12.0  # Symbolic mathematics (Module 0)
 statsmodels>=0.14.0  # Statistical modeling (Module 0 Probability)
-tensorflow>=2.20.0  # For deep learning (Module 6)
-keras>=3.11.0       # For neural networks
-torch>=2.8.0        # PyTorch for deep learning
-torchvision>=0.23.0 # Computer vision with PyTorch
+tensorflow>=2.12.0  # For deep learning (Module 6)
+keras>=2.12.0       # For neural networks
+torch>=2.0.0        # PyTorch for deep learning (Module 6)
+torchvision>=0.15.0 # Computer vision with PyTorch (Module 6 CNNs)
+opencv-python>=4.8.0  # Image processing (Module 6 CNNs)
+gdown>=4.7.0        # Google Drive downloads (Module 6 datasets)
+pillow>=9.5.0       # Image processing and PIL operations
 ```
 
 ## Running Notebooks
@@ -326,11 +330,12 @@ This project has been significantly enhanced beyond basic requirements:
 - Clustering algorithms: K-Means, Hierarchical, DBSCAN
 - Requires: scikit-learn, matplotlib, seaborn for visualization
 
-### Module 6: Neural Networks
+### Module 6: Neural Networks & Deep Learning
 - Forward propagation and back propagation implementation
 - Neural network training from scratch with custom implementations
-- Neural network fundamentals and gradient descent optimization
-- Requires: numpy, matplotlib, scikit-learn (for basic implementations), tensorflow, keras, torch for advanced deep learning
+- Convolutional Neural Networks (CNNs) and computer vision
+- Transfer learning and fine-tuning pretrained models
+- Requires: numpy, matplotlib, scikit-learn, torch, torchvision, opencv-python, gdown
 
 #### 🧠 Mod6_Lab2_Training_a_Neural_Network.ipynb - Neural Network Tutorial
 This notebook provides a comprehensive walkthrough of neural network concepts:
@@ -341,6 +346,26 @@ This notebook provides a comprehensive walkthrough of neural network concepts:
 - **Learning Concepts**: Forward propagation, backpropagation, parameter optimization
 - **Dependencies**: numpy, matplotlib, scikit-learn (Iris dataset)
 - **Environment**: Compatible with mod6_lab2_venv or main .venv
+
+#### 🖼️ Mod6_Lab3_CNN_&_Architectures.ipynb - Convolutional Neural Networks ✅ COMPLETE
+This comprehensive notebook covers CNN fundamentals and advanced deep learning concepts:
+- **Section 1: CNN Fundamentals**
+  - Convolution operations with custom implementations
+  - CNN implementation and training on MNIST dataset
+  - CNN visualization and filter analysis
+- **Section 2: Advanced CNN Concepts**
+  - Effects of padding, kernel size, and stride
+  - Pooling operations (Max pooling, Average pooling)
+  - Transfer learning with ResNet18 on German Traffic Signs dataset
+- **Key Features**:
+  - Custom convolution functions for educational purposes
+  - PyTorch CNN implementation with detailed explanations
+  - Filter visualization and feature map analysis
+  - Transfer learning comparison: Fine-tuning vs Feature extraction
+  - Comprehensive exercise solutions covering transfer learning concepts
+- **Datasets**: MNIST (auto-downloaded), German Traffic Signs (auto-downloaded), lotus.jpg (sample image)
+- **Dependencies**: torch, torchvision, opencv-python, matplotlib, numpy, gdown
+- **Environment**: Compatible with mod6_lab3_venv or main .venv
 
 ## Learning Path
 
@@ -369,11 +394,27 @@ If you find issues or want to improve the notebooks:
 
 This project is for educational purposes. Please respect any dataset licenses and cite sources appropriately.
 
+## Troubleshooting
+
+### Common Issues
+
+#### Module 6 (CNN & Deep Learning)
+- **PyTorch Installation Issues**: Use `pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu` for CPU-only version
+- **CUDA/GPU Issues**: Install appropriate CUDA version or use CPU-only PyTorch
+- **German Traffic Signs Dataset Download**: Ensure stable internet connection, retry if download fails
+- **OpenCV Installation**: Try `pip install opencv-python-headless` if regular opencv-python fails
+- **Memory Issues**: Reduce batch size or use smaller model if running out of memory
+
+#### General Issues
+- **Virtual Environment**: Always activate your virtual environment before installing packages
+- **Package Conflicts**: Create separate environments for different modules if needed
+- **Jupyter Kernel**: Run `python -m ipykernel install --user --name=venv_name` to register your environment
+
 ## Support
 
 If you encounter issues:
 
-1. Check this README first
+1. Check this README and troubleshooting section first
 2. Look for similar issues in the repository
 3. Create a new issue with:
    - Your operating system
@@ -385,10 +426,19 @@ If trouble persists, contact: **saiguruinukurthi@gmail.com**
 
 ## Additional Resources
 
+### General Python & ML
 - [Python Virtual Environments Guide](https://docs.python.org/3/tutorial/venv.html)
 - [Jupyter Documentation](https://jupyter.readthedocs.io/)
 - [VS Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+
+### Deep Learning & CNNs (Module 6)
+- [PyTorch Tutorials](https://pytorch.org/tutorials/)
+- [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
+- [Transfer Learning Tutorial](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
+- [CNN Explainer Interactive Tool](https://poloclub.github.io/cnn-explainer/)
+- [CS231n: CNNs for Visual Recognition](http://cs231n.stanford.edu/)
+- [Torchvision Models](https://pytorch.org/vision/stable/models.html)
 
 ---
 

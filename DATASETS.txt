@@ -12,6 +12,8 @@ This file maps each notebook to the datasets it uses. Make sure you have the req
 - spam.csv                # Email spam classification dataset
 - Mall_Customers.csv      # Mall customer segmentation dataset (auto-downloaded by Mod5_Lab3)
 - Wholesale customers data.csv  # Wholesale customer dataset (auto-downloaded by Mod5_Lab3)
+- lotus.jpg               # Sample image for convolution operations (auto-downloaded by Mod6_Lab3)
+- german_traffic_signs_dataset.zip  # German Traffic Sign dataset for transfer learning (auto-downloaded by Mod6_Lab3)
 
 📓 NOTEBOOK-DATASET MAPPING:
 ----------------------------
@@ -111,11 +113,20 @@ MODULE 6 - NEURAL NETWORKS:
    └── External: None required
 
 📒 Mod6_Lab2_Training_a_Neural_Network.ipynb
-   └── Datasets: Built-in sklearn datasets (Iris)
-   └── External: None required
+   └── Datasets: Built-in sklearn datasets (Iris), MNIST (from torchvision)
+   └── External: None required (auto-downloaded)
    └── Analysis: Neural network fundamentals, forward/backward propagation implementation
    └── Features: Custom neural network class, gradient descent, sigmoid activation
    └── Note: Tutorial notebook demonstrating neural network training from scratch
+
+📒 Mod6_Lab3_CNN_&_Architectures.ipynb ✅ COMPLETE WITH ANSWERS
+   └── Datasets: MNIST (from torchvision), German Traffic Signs dataset
+   └── External Images: lotus.jpg (for convolution examples)
+   └── Auto-downloads: german_traffic_signs_dataset.zip (from Google Drive)
+   └── Analysis: Convolutional operations, CNN visualization, transfer learning
+   └── Architectures: Custom CNN, ResNet18, transfer learning comparison
+   └── Features: Conv2D operations, pooling, fine-tuning vs feature extraction
+   └── Note: Complete with exercise answers on transfer learning and data augmentation
 
 MODULE 0 - MATHEMATICAL FOUNDATIONS:
 -----------------------------------
